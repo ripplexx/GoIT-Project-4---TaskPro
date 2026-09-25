@@ -1,0 +1,256 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 16px;
+}
+
+.modal {
+  width: 335px;
+  height: 522px;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  background: var(--color-card);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+[data-theme="violet"] .modal {
+  background: #fcfcfc;
+}
+
+[data-theme="violet"] .input,
+[data-theme="violet"] .textarea {
+  background: #fcfcfc;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0 0 24px;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  border-radius: 4px;
+  transition: color 0.15s;
+}
+
+.closeBtn:hover {
+  color: var(--color-text);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex: 1;
+}
+
+.input {
+  width: 287px;
+  height: 49px;
+  border-radius: 8px;
+  border: 1px solid var(--color-accent);
+  background: var(--color-input-bg);
+  color: var(--color-text);
+  font-size: 14px;
+  padding: 0 18px;
+  outline: none;
+  font-family: inherit;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.input:focus {
+  border-color: var(--color-accent);
+}
+
+.input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.textarea {
+  width: 287px;
+  height: 154px;
+  border-radius: 8px;
+  border: 1px solid var(--color-accent);
+  background: var(--color-input-bg);
+  color: var(--color-text);
+  font-size: 14px;
+  padding: 14px 18px;
+  outline: none;
+  font-family: inherit;
+  resize: none;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.textarea:focus {
+  border-color: var(--color-accent);
+}
+
+.textarea::placeholder {
+  color: var(--color-text-muted);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.label {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.priorities {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.priorityBtn {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.15s;
+}
+
+.priorityBtn:hover {
+  transform: scale(1.3);
+}
+
+.priorityBtn.selected {
+  outline: 2px solid var(--color-text);
+  outline-offset: 2px;
+}
+
+.deadlineValue {
+  font-size: 14px;
+  color: var(--color-accent);
+  font-weight: 500;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  text-align: left;
+  font-family: inherit;
+}
+
+.deadlineValue:hover {
+  opacity: 0.8;
+}
+
+[data-theme="violet"] .deadlineValue {
+  color: #5255bc;
+}
+
+.deadlinePlaceholder {
+  font-size: 14px;
+  color: var(--color-accent);
+  opacity: 0.6;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  text-align: left;
+  font-family: inherit;
+}
+
+[data-theme="violet"] .deadlinePlaceholder {
+  color: #5255bc;
+}
+
+.submitBtn {
+  width: 100%;
+  height: 49px;
+  background-color: var(--color-accent);
+  border: none;
+  border-radius: 8px;
+  color: var(--color-btn-text);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: auto;
+  transition: opacity 0.2s;
+}
+
+.submitBtn:hover:not(:disabled) {
+  opacity: 0.85;
+}
+
+.submitBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+[data-theme="violet"] .submitBtn {
+  background-color: #5255bc;
+  color: #ffffff;
+}
+
+.submitPlus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background-color: var(--color-btn-text);
+  color: var(--color-accent);
+  border-radius: 4px;
+  font-size: 18px;
+}
+
+[data-theme="violet"] .submitPlus {
+  background-color: #ffffff;
+  color: #5255bc;
+}
+
+.error {
+  font-size: 12px;
+  color: #e74c3c;
+  margin-top: 2px;
+}
+
+/* 768px — tablet & laptop */
+@media (min-width: 768px) {
+  .modal {
+    width: 350px;
+    height: 522px;
+  }
+
+  .input {
+    width: 302px;
+  }
+
+  .textarea {
+    width: 302px;
+  }
+}

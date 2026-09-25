@@ -1,0 +1,29 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-bg);
+}
+
+.card {
+  text-align: center;
+}
+
+.code {
+  font-size: 64px;
+  font-weight: 700;
+  color: var(--color-accent);
+  margin: 0;
+}
+
+.text {
+  color: var(--color-text-muted);
+  margin: 8px 0 20px;
+}
+
+.link {
+  color: var(--color-accent);
+  font-weight: 600;
+  text-decoration: underline;
+}

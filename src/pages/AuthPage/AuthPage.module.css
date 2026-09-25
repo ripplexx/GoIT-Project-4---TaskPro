@@ -1,0 +1,239 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #ffffff 25%, #bedbb0 92.19%);
+  padding: 24px;
+}
+
+.card {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent),
+    var(--color-card);
+  border-radius: 24px;
+  padding: 40px;
+  width: 100%;
+  max-width: 520px;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.kicker {
+  color: var(--color-text-muted);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 10px;
+}
+
+.description {
+  color: var(--color-text-muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.error {
+  background: rgba(220, 53, 69, 0.12);
+  border: 1px solid rgba(220, 53, 69, 0.3);
+  color: #ff6b6b;
+  font-size: 13px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-bottom: 18px;
+}
+
+.tabs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  padding: 6px;
+  background: var(--color-input-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  margin-bottom: 24px;
+}
+
+.tab {
+  border-radius: 999px;
+  color: var(--color-text-muted);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 14px;
+  text-align: center;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    box-shadow 0.2s;
+}
+
+.tab:hover {
+  color: var(--color-text);
+}
+
+.tabActive {
+  background: var(--color-card);
+  color: var(--color-text);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  color: var(--color-text-muted);
+  font-size: 13px;
+}
+
+.input {
+  background: var(--color-input-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  color: var(--color-text);
+  font-size: 14px;
+  padding: 14px 16px;
+  outline: none;
+  transition: border-color 0.2s;
+  width: 100%;
+}
+
+.input::placeholder {
+  color: var(--color-text-muted);
+}
+.input:focus,
+.input:focus-visible {
+  border-color: var(--color-accent);
+}
+
+.passwordField {
+  position: relative;
+}
+
+.passwordInput {
+  padding-right: 52px;
+}
+
+.visibilityBtn {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  color: var(--color-text);
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+.visibilityBtn:hover {
+  background: var(--color-hover);
+  color: var(--color-text);
+}
+
+.visibilityBtn:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.visibilityIcon {
+  width: 18px;
+  height: 24px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.fieldError {
+  color: #ff6b6b;
+  font-size: 11px;
+  padding-left: 2px;
+}
+
+.btnSubmit {
+  background: var(--color-accent);
+  color: var(--color-btn-text);
+  font-weight: 600;
+  font-size: 14px;
+  padding: 14px;
+  border-radius: 8px;
+  margin-top: 8px;
+  transition:
+    background 0.2s,
+    opacity 0.2s;
+}
+
+.btnSubmit:hover:not(:disabled) {
+  background: var(--color-accent-hover);
+}
+.btnSubmit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* 375px — mobile */
+@media (max-width: 767px) {
+  .page {
+    padding: 16px;
+  }
+
+  .card {
+    padding: 24px 20px;
+    border-radius: 16px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .tab {
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+}
+
+/* 768px — tablet */
+@media (min-width: 768px) {
+  .card {
+    padding: 36px;
+  }
+}
+
+/* 1440px — desktop */
+@media (min-width: 1440px) {
+  .card {
+    max-width: 560px;
+    padding: 48px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+}

@@ -1,0 +1,63 @@
+.board {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 24px;
+  overflow-x: auto;
+  flex: 1;
+  min-height: 0;
+
+  background-color: var(--color-bg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.addColBtn {
+  background: var(--color-card);
+  border: 1px dashed var(--color-border);
+  border-radius: 12px;
+  color: var(--color-text-muted);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 16px 24px;
+  white-space: nowrap;
+  transition:
+    background 0.2s,
+    color 0.2s;
+  align-self: flex-start;
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.addColBtn:hover {
+  background: var(--color-hover-strong);
+  color: var(--color-text);
+}
+
+/* 375px — mobile */
+@media (max-width: 767px) {
+  .board {
+    padding: 16px;
+    gap: 12px;
+  }
+}
+
+/* 768px — tablet */
+@media (min-width: 768px) {
+  .board {
+    padding: 20px;
+  }
+}
+
+/* 1440px — desktop */
+@media (min-width: 1440px) {
+  .board {
+    padding: 24px;
+    gap: 20px;
+  }
+}

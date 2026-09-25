@@ -1,0 +1,102 @@
+.page {
+  --color-bg: linear-gradient(180deg, #ffffff 25%, #bedbb0 92.19%);
+  --color-text: #161616;
+  --color-text-muted: rgba(22, 22, 22, 0.8);
+  --color-accent: #161616;
+  --color-btn-text: #ffffff;
+
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg);
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.card {
+  background: transparent;
+  border: none;
+  width: 100%;
+  max-width: 480px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar {
+  width: 124px;
+  height: 124px;
+  object-fit: contain;
+  margin-bottom: 24px;
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+
+.logo {
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.tagline {
+  color: var(--color-text-muted);
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 40px;
+  max-width: 420px;
+  text-align: center;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+.btnPrimary {
+  display: block;
+  width: 100%;
+  max-width: 345px;
+  background: var(--color-accent);
+  color: var(--color-btn-text);
+  font-weight: 500;
+  font-size: 14px;
+  padding: 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  box-sizing: border-box;
+  text-align: center;
+  transition: opacity 0.2s;
+}
+
+.btnPrimary:hover {
+  opacity: 0.9;
+}
+
+.btnLink {
+  display: inline-block;
+  color: var(--color-text);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 8px;
+  transition: opacity 0.2s;
+}
+
+.btnLink:hover {
+  opacity: 0.7;
+}
