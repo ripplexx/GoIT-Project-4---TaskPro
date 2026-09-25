@@ -28,6 +28,7 @@
     "vite": "^6.0.7"
   },
   "scripts": {
+    "seed": "node src/db/seed.js",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
