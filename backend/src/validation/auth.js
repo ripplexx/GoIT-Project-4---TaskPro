@@ -1,6 +1,6 @@
 import Joi from 'joi';
 
-// Frontend'in src/utils/validationSchemas.js'teki nameRules/passwordRules ile birebir aynı.
+
 const name = Joi.string().min(2).max(32).required();
 const password = Joi.string()
   .min(8)

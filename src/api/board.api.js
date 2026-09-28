@@ -1,7 +1,4 @@
-/**
- * Board API layer — gerçek backend'e bağlanıyor.
- * BoardContext'in çağırdığı fonksiyon imzaları mock dönemiyle birebir aynı.
- */
+
 import { api } from './client';
 
 export const getBoards = () => api.get('/boards');

@@ -1,8 +1,7 @@
 export const FIFTEEN_MINUTES = 15 * 60 * 1000;
 export const THIRTY_DAYS = 30 * 24 * 60 * 60 * 1000;
 
-// Frontend'in src/utils/validationSchemas.js ve src/constants/boardIcons.js dosyalarıyla
-// birebir aynı kalmalı; biri değişirse diğeri de değişmeli.
+
 export const PRIORITIES = ['without', 'low', 'medium', 'high'];
 
 export const BOARD_ICONS = [
