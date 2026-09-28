@@ -215,7 +215,7 @@ Add every backend variable from the table above in the **Environment** tab. Set 
 
 ## 👩‍💻 Author
 
-**Ripplex**
+**Eray SÖNMEZER**
 GitHub: [@ripplexx](https://github.com/ripplexx)
 
 Built as the final project of the GoIT Fullstack course.
