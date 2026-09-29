@@ -6,8 +6,6 @@ const password = Joi.string()
   .min(8)
   .max(64)
   .pattern(/^\S+$/, 'no spaces')
-  .pattern(/[A-Z]/, 'uppercase letter')
-  .pattern(/[0-9]/, 'digit')
   .required();
 
 export const registerSchema = Joi.object({
